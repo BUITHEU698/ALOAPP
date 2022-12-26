@@ -18,7 +18,6 @@ div {
     list-style-type: none;
 }
 .approval-member {
-    background-color: $gray-100;
     width: 375px;
     height: 500px;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
@@ -48,5 +47,39 @@ div {
             }
         }
     }
-  
+    & > .conten {
+        li {
+            display: flex;
+            align-items: center;
+            height: 67px;
+            padding: 0 20px;
+            & > svg {
+                margin-right: 10px;
+                + span {
+                    height: 67px;
+                    @include text-16-regular;
+                    margin-left: 20px;
+                    width: 100%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            &.title-approval-member {
+                .title {
+                    margin-left: 0px;
+                    height: 67px;
+                    width: 100%;
+                    align-items: center;
+                    display: flex;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    @include text-16-regular;
+                }
+            }
+            // & > .time-start-approval {
+            // }
+            // & > .repeat-approval {
+            // }
+        }
+    }
 }
