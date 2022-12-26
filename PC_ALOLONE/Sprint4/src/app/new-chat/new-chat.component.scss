@@ -62,8 +62,11 @@ div {
         display: flex;
     }
     .list-user {
-        padding: 10px 10px 0 10px;
+      
         & > ul {
+            margin-top: 10px;
+        
+           
             &::-webkit-scrollbar {
                 width: 0px;
             }
@@ -73,7 +76,8 @@ div {
                 display: flex;
                 align-items: center;
                 position: relative;
-                padding: 11px 0px;
+                padding: 11px 0 9px 10px;
+                margin-bottom: 2px;
                 & > .chooseUser {
                     position: relative;
                     margin-left: 10px;
