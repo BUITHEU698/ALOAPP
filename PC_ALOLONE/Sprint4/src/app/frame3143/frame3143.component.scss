@@ -1,0 +1,196 @@
+@import "./../variables";
+@import "./../mixins2";
+h2,
+p,
+ul,
+li,
+span,
+a,
+h1,
+h3,
+h4,
+h5,
+h6,
+img,
+div {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.frame3143 {
+    position: absolute;
+    width: 320px;
+    height: calc(100vh - 76px);
+    background-color: $gray-100;
+    @include text-10-regular;
+
+    .exploreAroundYou {
+        .top-title {
+            justify-content: space-between;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            h2 {
+                color: $gray-700;
+            }
+            button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-radius: 30px;
+                border: none;
+                @include text-12-regular;
+                // padding: 6px 10px;
+                background-color: $gray-300;
+                width: 54px;
+                height: 26px;
+                color: $gray-700;
+            }
+        }
+        .list-restaurant {
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+            display: flex;
+            list-style-type: none;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 320px;
+            li {
+                margin-right: 9px;
+
+                .img-restaurant {
+                    position: relative;
+                    width: 142px;
+                    height: 142px;
+
+                    .banner {
+                        width: 142px;
+                        height: 142px;
+                        border-radius: 8px;
+                    }
+                    .list-icon {
+                        position: absolute;
+                        display: flex;
+                        width: 100%;
+                        bottom: 4px;
+                        justify-content: space-between;
+                        .zo-img {
+                            margin-left: 4px;
+                            border-radius: 4px;
+                        }
+                        .zo-svg {
+                            margin-right: 2px;
+                        }
+                    }
+                }
+            }
+            .info {
+                margin-top: 5px;
+
+                .name {
+                    @include text-14-bold;
+                    margin: 0px;
+                    padding: 0px;
+                    color: $gray-900;
+                }
+                .diachi {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 4px;
+
+                    p {
+                        @include text-10-bold;
+                        color: $gray-000;
+                        padding: 1px 4px 0px;
+                        background: linear-gradient(135deg, #0071bb 16.67%, #ffa233 84.11%);
+                        border-radius: 10px;
+                    }
+                    span {
+                        @include line-limit(1);
+                        @include text-10-regular;
+                        margin-left: 5px;
+                        color: $gray-900;
+                        display: flex;
+                    }
+                }
+                .danhgia {
+                    margin-top: 4px;
+                    display: flex;
+                    & > ul {
+                        padding: 0;
+                        display: flex;
+                        text-align: left;
+                        li {
+                            list-style-type: none;
+                            margin: 0px;
+                            margin-right: 1px;
+                        }
+                    }
+                    & > span {
+                        color: $blue-600;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        margin-right: 10px;
+        .title {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: $gray-300 solid 1px;
+            padding: 8px 0 7px;
+            & > p {
+                color: $gray-700;
+                @include text-16-bold;
+            }
+            & > ul {
+                display: flex;
+                flex-direction: row;
+                column-gap: 6px;
+                list-style-type: none;
+                li {
+                    background: $gray-300;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .list-contact {
+            & > ul {
+                align-items: flex-start;
+                list-style-type: none;
+                overflow-y: scroll;
+                margin-top: 10px;
+                height: calc(100vh - 420px);
+
+                &::-webkit-scrollbar {
+                    width: 0px;
+                }
+                li {
+                    display: flex;
+                    padding: 8px 0px;
+                    align-items: center;
+                    & > img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                    & > p {
+                        @include line-limit(1);
+                        margin-left: 10px;
+                        color: $gray-700;
+                        @include text-16-regular;
+                    }
+                }
+            }
+        }
+    }
+}
