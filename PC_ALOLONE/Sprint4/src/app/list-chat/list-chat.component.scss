@@ -1,0 +1,144 @@
+@import "./../variables";
+@import "./../mixins2";
+h2,
+p,
+ul,
+li,
+span,
+a,
+h1,
+h3,
+h4,
+h5,
+h6,
+img,
+div {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.list-chat {
+    width: 375px;
+    height: 760px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 10px 10px 0px 0px;
+    @include text-10-regular;
+    position: absolute;
+    & > .header {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > h3 {
+            color: $gray-900;
+            @include text-16-bold;
+            padding: 15px 0 14px 0;
+        }
+        & > ul {
+            display: flex;
+            & > li {
+                margin-left: 10px;
+            }
+        }
+    }
+    .search {
+        display: flex;
+        padding: 8px 20px;
+        background: #f5f6fa;
+        align-items: center;
+        position: relative;
+        & > svg {
+            position: absolute;
+            margin-left: 8px;
+        }
+
+        & > input {
+            background: $gray-000;
+            border: 1px solid $gray-300;
+            border-radius: 30px;
+            width: 100%;
+            opacity: none;
+            @include text-14-regular;
+            padding: 11px 16px 11px 36px;
+            outline-style: none;
+            &::placeholder {
+                color: $gray-400;
+                @include text-14-regular;
+            }
+        }
+        display: flex;
+    }
+    .list-user {
+        & > ul {
+            margin-top: 10px;
+
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+            overflow-y: scroll;
+            max-height: 647px;
+            li {
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding: 11px 0 9px 0;
+                margin: 0 10px;
+                margin-bottom: 2px;
+                background-color: $orange-100;
+                border-radius: 10px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+                .onOf {
+                    position: absolute;
+                    top: 44px;
+                    left: 44px;
+                }
+                .name-user {
+                    & > p {
+                        @include text-16-bold;
+                        margin-bottom: 2px;
+                    }
+                    & > span {
+                        @include text-12-regular;
+                        color: $gray-500;
+                    }
+                }
+                .user-chat-info {
+                    flex: 1;
+                    align-self: flex-start;
+                    text-align: right;
+                    margin-right: 10px;
+                    & > p {
+                        color: $gray-500;
+                        @include text-14-regular;
+                        margin-bottom: 5px;
+                    }
+                    & > .list-info {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        width: 100%;
+                        column-gap: 5px;
+                        & > span {
+                            color: white;
+                            background-color: $orange-900;
+                            font-weight: 700;
+                            font-size: 10px;
+                            line-height: 12px;
+                            border-radius: 8px;
+                            padding: 1.5px 3px 0.5px 3px;
+                            display: grid;
+                            place-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

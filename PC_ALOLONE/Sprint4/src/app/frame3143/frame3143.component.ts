@@ -24,8 +24,7 @@ export class Frame3143Component {
         this.element.nativeElement.scrollLeft -= 100;
       } else {
         this.element.nativeElement.scrollLeft += 100;
-        console.log(event.preventDefault);
-      }
+       }
     }
   }
 }

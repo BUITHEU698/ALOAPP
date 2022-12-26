@@ -6,6 +6,8 @@ import { Frame3143Component } from './frame3143/frame3143.component';
 import { NewChatComponent } from './new-chat/new-chat.component';
 import { ApprovalMemberComponent } from './approval-member/approval-member.component';
 import { NewCalendarGroupComponent } from './new-calendar-group/new-calendar-group.component';
+import { ListChatComponent } from './list-chat/list-chat.component';
+import { SettingGroupComponent } from './setting-group/setting-group.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { NewCalendarGroupComponent } from './new-calendar-group/new-calendar-gro
     NewChatComponent,
     ApprovalMemberComponent,
     NewCalendarGroupComponent,
+    ListChatComponent,
+    SettingGroupComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
