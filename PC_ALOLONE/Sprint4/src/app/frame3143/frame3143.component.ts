@@ -18,12 +18,14 @@ export class Frame3143Component {
 
   @HostListener('mousewheel', ['$event'])
   onMouseWheel(event: WheelEvent) {
-    console.log(this.checkScollEvent);
     if (!this.element) return;
-    if (event.deltaY > 0 && this.checkScollEvent == true) {
-      this.element.nativeElement.scrollLeft -= 50;
-    } else {
-      this.element.nativeElement.scrollLeft += 50;
+    if (this.checkScollEvent == true) {
+      if (event.deltaY > 0) {
+        this.element.nativeElement.scrollLeft -= 100;
+      } else {
+        this.element.nativeElement.scrollLeft += 100;
+        console.log(event.preventDefault);
+      }
     }
   }
 }

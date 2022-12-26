@@ -157,7 +157,10 @@ div {
                 list-style-type: none;
                 li {
                     background: $gray-300;
-                    padding: 10px;
+                    display: grid;
+                    place-content: center;
+                    width: 30px;
+                    height: 30px;
                     border-radius: 50%;
                 }
             }
@@ -169,7 +172,7 @@ div {
                 list-style-type: none;
                 overflow-y: scroll;
                 margin-top: 10px;
-                height: calc(100vh - 420px);
+                height: calc(100vh - 425px);
 
                 &::-webkit-scrollbar {
                     width: 0px;
