@@ -1,18 +1,11 @@
-import {
-  Component,
-  Directive,
-  ElementRef,
-  HostListener,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-frame3143',
-  templateUrl: './frame3143.component.html',
-  styleUrls: ['./frame3143.component.scss'],
+  selector: 'app-explore-around-you',
+  templateUrl: './explore-around-you.component.html',
+  styleUrls: ['./explore-around-you.component.scss'],
 })
-export class Frame3143Component {
-  constructor() {}
+export class ExploreAroundYouComponent {
   checkScollEvent: boolean = false;
   @ViewChild('scollEvent') element: ElementRef | undefined;
 
@@ -24,7 +17,7 @@ export class Frame3143Component {
         this.element.nativeElement.scrollLeft -= 100;
       } else {
         this.element.nativeElement.scrollLeft += 100;
-       }
+      }
     }
   }
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Frame3143Component } from './frame3143.component';
+import { ListMessPinnedComponent } from './list-mess-pinned.component';
 
-describe('Frame3143Component', () => {
-  let component: Frame3143Component;
-  let fixture: ComponentFixture<Frame3143Component>;
+describe('ListMessPinnedComponent', () => {
+  let component: ListMessPinnedComponent;
+  let fixture: ComponentFixture<ListMessPinnedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Frame3143Component ]
+      declarations: [ ListMessPinnedComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Frame3143Component);
+    fixture = TestBed.createComponent(ListMessPinnedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -20,10 +20,12 @@ div {
 .list-chat {
     width: 375px;
     height: 760px;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
     border-radius: 10px 10px 0px 0px;
     @include text-10-regular;
-    position: absolute;
+
     & > .header {
         padding: 0 20px;
         display: flex;
@@ -69,73 +71,74 @@ div {
         display: flex;
     }
     .list-user {
-        & > ul {
-            margin-top: 10px;
+        flex: 1;
+       
 
-            &::-webkit-scrollbar {
-                width: 0px;
+        margin-top: 10px;
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+        overflow-y: scroll;
+        // max-height: 647px;
+
+        li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 11px 0 9px 0;
+            margin: 0 10px;
+            margin-bottom: 2px;
+            background-color: $orange-100;
+            border-radius: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+                margin-left: 10px;
             }
-            overflow-y: scroll;
-            max-height: 647px;
-            li {
-                display: flex;
-                align-items: center;
-                position: relative;
-                padding: 11px 0 9px 0;
-                margin: 0 10px;
-                margin-bottom: 2px;
-                background-color: $orange-100;
-                border-radius: 10px;
-
-                img {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    margin-right: 10px;
-                    margin-left: 10px;
+            .onOf {
+                position: absolute;
+                top: 44px;
+                left: 44px;
+            }
+            .name-user {
+                & > p {
+                    @include text-16-bold;
+                    margin-bottom: 2px;
                 }
-                .onOf {
-                    position: absolute;
-                    top: 44px;
-                    left: 44px;
+                & > span {
+                    @include text-12-regular;
+                    color: $gray-500;
                 }
-                .name-user {
-                    & > p {
-                        @include text-16-bold;
-                        margin-bottom: 2px;
-                    }
+            }
+            .user-chat-info {
+                flex: 1;
+                align-self: flex-start;
+                text-align: right;
+                margin-right: 10px;
+                & > p {
+                    color: $gray-500;
+                    @include text-14-regular;
+                    margin-bottom: 5px;
+                }
+                & > .list-info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 100%;
+                    column-gap: 5px;
                     & > span {
-                        @include text-12-regular;
-                        color: $gray-500;
-                    }
-                }
-                .user-chat-info {
-                    flex: 1;
-                    align-self: flex-start;
-                    text-align: right;
-                    margin-right: 10px;
-                    & > p {
-                        color: $gray-500;
-                        @include text-14-regular;
-                        margin-bottom: 5px;
-                    }
-                    & > .list-info {
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-end;
-                        width: 100%;
-                        column-gap: 5px;
-                        & > span {
-                            color: white;
-                            background-color: $orange-900;
-                            font-weight: 700;
-                            font-size: 10px;
-                            line-height: 12px;
-                            border-radius: 8px;
-                            padding: 1.5px 3px 0.5px 3px;
-                            display: grid;
-                            place-content: center;
-                        }
+                        color: white;
+                        background-color: $orange-900;
+                        font-weight: 700;
+                        font-size: 10px;
+                        line-height: 12px;
+                        border-radius: 8px;
+                        padding: 1.5px 3px 0.5px 3px;
+                        display: grid;
+                        place-content: center;
                     }
                 }
             }
