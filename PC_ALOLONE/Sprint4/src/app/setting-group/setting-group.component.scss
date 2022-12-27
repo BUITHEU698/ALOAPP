@@ -71,30 +71,72 @@ div {
                 align-items: center;
                 padding: 0px 20px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                & > div {
-                    flex: 1;
-                    p {
-                        flex: 1;
-                    }
+                & > div {        
+                    // p {              
+                    // }
                     span {
                         @include text-12-regular;
                         color: $gray-600;
                     }
                 }
-                svg {
+                .checkbox-switch {
                     margin-left: 20px;
+                    width: 52px;
+                    height:32px;
+                    position: relative;
+                    z-index: 3;
+                    & > input[type="checkbox"] {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 52px;
+                        height:32px;
+                        border-radius: 30px;
+                        z-index: 1;
+                        opacity: 0.0001;
+                    }
+
+                    & > input[type="checkbox"]:checked {
+                        background: $orange-700-brand;
+                    }
+
+                    div {
+                        background-color: $orange-200;
+                        width: 52px;
+                        height:32px;
+                        border-radius: 40px;
+                        border: 1px solid $orange-700-brand;
+                        position: relative;
+                        transition: all 0.15s linear;
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            left: 2px;
+                            transform: translateY(-50%);
+                            width: 28px;
+                            height: 28px;
+                            border-radius: 20px;
+                            background-color: $gray-000;
+                            transition: all 0.15s linear;
+                        }
+                    }
+                    input:checked + div {
+                        background-color: $orange-700-brand;
+                        & > span {
+                            left: 20px;
+                        }
+                    }
                 }
             }
-            & > .header {
-                & > p {
-                    color: $blue-700-brand;
-                    @include text-14-regular;
-                    
-                }
-                .delete-group-bnt{
-                    color: $orange-800;
-                    @include text-16-regular;
-                }
+        }
+        & > .header {
+            & > p {
+                color: $blue-700-brand;
+                @include text-14-regular;
+            }
+            .delete-group-bnt {
+                color: $orange-800;
+                @include text-16-regular;
             }
         }
     }
