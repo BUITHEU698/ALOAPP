@@ -48,9 +48,12 @@ div {
             }
         }
     }
-    .haahahaha {
+    .conten-approval-member {
         background-color: $gray-000;
+        height: calc(100% - 58px);
         margin-top: 12px;
+        display: flex;
+        flex-direction: column;
         & > .other {
             height: 35px;
             display: flex;
@@ -67,7 +70,7 @@ div {
             }
         }
         & > .conten {
-            height: 405px;
+           flex: 1;
             overflow-y: scroll;
             &::-webkit-scrollbar {
                 width: 0;
