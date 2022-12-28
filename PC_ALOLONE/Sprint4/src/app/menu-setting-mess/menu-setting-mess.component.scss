@@ -1,0 +1,46 @@
+@import "./../variables";
+@import "./../mixins2";
+h2,
+p,
+ul,
+li,
+span,
+a,
+h1,
+h3,
+h4,
+h5,
+h6,
+img,
+div {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.menu-setting-mess {
+    width: 230px;
+    position: relative;     
+    height: 311px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 10px 10px 10px 10px;
+    @include text-16-regular;
+    > .setting-info {
+        display: flex;
+        height: 38px;
+
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
+        .icon {
+            width: 28px;
+            padding: 0 12.5px 0 20px;
+        }
+        .conten {
+            flex: 1;
+        }
+    }
+    .delete {
+        color: $red-600;
+        border-bottom:none;
+    }
+}
