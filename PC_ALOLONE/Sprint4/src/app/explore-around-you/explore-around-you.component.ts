@@ -22,7 +22,7 @@ export class ExploreAroundYouComponent {
     this.exploreAroundYouService.getExplore();
     this.exploreAroundYouService._explore$.subscribe((data) => {
       this._explores = data;
-    });
+    });     
   }
   @HostListener('mousewheel', ['$event'])
   onMouseWheel(event: WheelEvent) {
