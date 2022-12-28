@@ -8,7 +8,6 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 export class ExploreAroundYouComponent {
   checkScollEvent: boolean = false;
   @ViewChild('scollEvent') element: ElementRef | undefined;
-
   @HostListener('mousewheel', ['$event'])
   onMouseWheel(event: WheelEvent) {
     if (!this.element) return;

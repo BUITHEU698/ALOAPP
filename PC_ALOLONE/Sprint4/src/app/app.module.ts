@@ -9,6 +9,7 @@ import { ListChatComponent } from './list-chat/list-chat.component';
 import { SettingGroupComponent } from './setting-group/setting-group.component';
 import { ListMessPinnedComponent } from './list-mess-pinned/list-mess-pinned.component';
 import { ExploreAroundYouComponent } from './explore-around-you/explore-around-you.component';
+import { SetTimeLimitComponent } from './set-time-limit/set-time-limit.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ExploreAroundYouComponent } from './explore-around-you/explore-around-y
     SettingGroupComponent,
     ListMessPinnedComponent,
     ExploreAroundYouComponent,
+    SetTimeLimitComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

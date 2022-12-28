@@ -1,0 +1,21 @@
+<div class="set-time-limit">
+  <div class="set-time">
+    <div class="header">Đặt giới hạn</div>
+    <div class="conten">
+      <ul class="hour">
+        <li *ngFor="let i of [].constructor(12); let index=index">{{index}} </li>
+      </ul>
+      <ul class="minute">
+        <li *ngFor="let j of [].constructor(60); let index2=index">{{index2 + 1}} </li>
+      </ul>
+      <ul class="am-pm">
+        <li>AM</li>
+        <li>PM</li>
+
+      </ul>
+      <div class="choose"></div>
+    </div>
+
+  </div>
+  <button class="choose-time">Xong </button>
+</div>
