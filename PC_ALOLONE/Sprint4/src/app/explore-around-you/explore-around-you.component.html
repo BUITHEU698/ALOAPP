@@ -158,15 +158,15 @@
   </div>
 
   <ul class="list-contact">
-    <li *ngFor="let i of [].constructor(4)">
-      <img src="../../assets/image/avatar.jfif" alt="">
-      <p>Voluptatem Accusantium
+    <li *ngFor="let friend of _friends">
+      <img src="{{friend.avatar}}" alt="">
+      <p>{{friend.name}}
       </p>
     </li>
-    <li *ngFor="let i of [].constructor(10)">
+    <!-- <li *ngFor="let i of [].constructor(10)">
       <img src="../../assets/image/avatar.jfif" alt="">
       <p>Voluptatem
       </p>
-    </li>
+    </li> -->
   </ul>
 </div>
