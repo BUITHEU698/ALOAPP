@@ -5,9 +5,9 @@
       <button>Tất cả</button>
     </div>
     <ul class="list-restaurant" (mouseover)="checkScollEvent=true" (mouseout)="checkScollEvent=false" #scollEvent list-restaurant>
-      <li *ngFor="let i of [].constructor(12)">
+      <li *ngFor="let explore of _explores ">
         <div class="img-restaurant">
-          <img class="banner" src="../../assets/image/baner.jfif" alt="">
+          <img class="banner" src="{{explore.image}}" alt="">
           <div class="list-icon">
             <svg class="zo-img" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect width="27" height="27" fill="url(#pattern0)" />
@@ -26,10 +26,10 @@
         </div>
 
         <div class="info">
-          <p class="name"> Eiusmod </p>
+          <p class="name"> {{explore.name}} </p>
           <div class="diachi">
-            <p>1.6km </p>
-            <span>303 Phạm Văn Đồng </span>
+            <p>{{explore.distance}} </p>
+            <span>{{explore.address}}</span>
           </div>
 
           <div class="danhgia">
