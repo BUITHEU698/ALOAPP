@@ -12,9 +12,7 @@ export class ExploreAroundYouComponent {
   @ViewChild('scollEvent') element: ElementRef | undefined;
   _friends: IFriend[] = [];
   _explores: IExplore[] = [];
-  constructor(
-    private exploreAroundYouService: ExploreAroundYouService,
-  ) {}
+  constructor(private exploreAroundYouService: ExploreAroundYouService) {}
   ngOnInit(): void {
     this.exploreAroundYouService.getListFriend();
     this.exploreAroundYouService._friends$.subscribe((u) => {
@@ -25,13 +23,11 @@ export class ExploreAroundYouComponent {
     this.exploreAroundYouService._explore$.subscribe((data) => {
       this._explores = data;
     });
-    console.log(this._explores);
   }
   @HostListener('mousewheel', ['$event'])
   onMouseWheel(event: WheelEvent) {
     if (!this.element) return;
     if (this.checkScollEvent == true) {
-  
       if (event.deltaY > 0) {
         this.element.nativeElement.scrollLeft -= 40;
       } else {
