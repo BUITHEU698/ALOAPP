@@ -193,23 +193,4 @@ div {
     }
 }
 
-.start-1{
-  border-radius: 3px;
-  background-color: $gray-400;
-  width: 12px;
-  height: 12px;
-  position: relative;
-  & > .bgr{
-    border-radius: 2.7px 0px 0px 2.7px;
-    background-color: $blue-600;
-    width: 10%;
-    height: 12px;
-    position: absolute;
-  }
-  & >svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(50%,50%);
-  }
-}
+

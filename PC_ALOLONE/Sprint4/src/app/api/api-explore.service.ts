@@ -14,7 +14,7 @@ export class ApiExploreService {
       name: 'Nhà hàng 0',
       distance: '0.2km',
       address: '303 phạm văn đồng',
-      rate: 4.5,
+      rate: 4.9,
     },
     {
       id_explore: 1,
@@ -93,7 +93,7 @@ export class ApiExploreService {
   getExplore$(): Observable<IExplore[]> {
     return of(this._explore);
     console.log(this._explore);
-    
+
   }
 }
 export interface IExplore {
