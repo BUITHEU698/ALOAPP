@@ -12,6 +12,8 @@ import { ExploreAroundYouComponent } from './explore-around-you/explore-around-y
 import { SetTimeLimitComponent } from './set-time-limit/set-time-limit.component';
 import { MenuSettingMessComponent } from './menu-setting-mess/menu-setting-mess.component';
 import { ListChooseGimComponent } from './list-choose-gim/list-choose-gim.component';
+import { ExploreAroundYou_1Component } from './function_explore_around_you/explore-around-you/explore-around-you-1.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { ListChooseGimComponent } from './list-choose-gim/list-choose-gim.compon
     SetTimeLimitComponent,
     MenuSettingMessComponent,
     ListChooseGimComponent,
+    ExploreAroundYou_1Component,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
