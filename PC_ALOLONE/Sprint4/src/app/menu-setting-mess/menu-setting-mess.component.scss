@@ -20,14 +20,12 @@ div {
 .menu-setting-mess {
     width: 230px;
     position: relative;     
-    height: 311px;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
     border-radius: 10px 10px 10px 10px;
     @include text-16-regular;
     > .setting-info {
         display: flex;
         height: 38px;
-
         align-items: center;
         width: 100%;
         border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
