@@ -33,7 +33,6 @@ div {
     border-bottom: 1px solid #f1f2f5;
     background-color: $gray-000;
     border-radius: 10px 10px 0px 0px;
-
     & > .left {
       padding: 15px 0px 14px 26.78px;
       display: flex;
@@ -93,7 +92,7 @@ div {
             }
             & > p {
               font-size: 12px;
-
+              margin-top: 2px;
               color: $gray-500;
             }
           }

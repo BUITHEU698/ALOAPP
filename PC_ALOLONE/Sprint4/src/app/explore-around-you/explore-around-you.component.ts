@@ -2,6 +2,8 @@ import { IFriend } from './../api/frends.service';
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ExploreAroundYouService } from './explore-around-you.service';
 import { IExplore } from './../api/api-explore.service';
+
+
 @Component({
   selector: 'app-explore-around-you',
   templateUrl: './explore-around-you.component.html',
@@ -9,8 +11,12 @@ import { IExplore } from './../api/api-explore.service';
 })
 export class ExploreAroundYouComponent {
   checkScollEvent: boolean = false;
-  @ViewChild('scollEvent') element: ElementRef | undefined;
+  @ViewChild('scollEvent', { static: true, read: ElementRef }) scollEvent:
+    | ElementRef
+    | undefined;
+
   _friends: IFriend[] = [];
+
   _explores: IExplore[] = [];
   constructor(private exploreAroundYouService: ExploreAroundYouService) {}
   ngOnInit(): void {
@@ -22,16 +28,21 @@ export class ExploreAroundYouComponent {
     this.exploreAroundYouService.getExplore();
     this.exploreAroundYouService._explore$.subscribe((data) => {
       this._explores = data;
-    });     
+    });
+
+    const scollEvent = this.scollEvent?.nativeElement;
+    scollEvent.addEventListener('wheel', (event: WheelEvent) => this.wheelEventVerticalToHorizontal(event));
   }
-  @HostListener('mousewheel', ['$event'])
+  @HostListener('wheel', ['$event'])
   onMouseWheel(event: WheelEvent) {
     if (!this.element) return;
+    const scrollableElement_ref = this.element.nativeElement;
+
     if (this.checkScollEvent == true) {
       if (event.deltaY > 0) {
-        this.element.nativeElement.scrollLeft -= 40;
+        scrollableElement_ref.scrollLeft -= 40;
       } else {
-        this.element.nativeElement.scrollLeft += 40;
+        scrollableElement_ref.scrollLeft += 40;
       }
     }
   }
