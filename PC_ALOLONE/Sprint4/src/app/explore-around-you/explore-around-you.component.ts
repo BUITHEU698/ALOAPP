@@ -18,6 +18,7 @@ export class ExploreAroundYouComponent {
   _friends: IFriend[] = [];
 
   _explores: IExplore[] = [];
+  element: any;
   constructor(private exploreAroundYouService: ExploreAroundYouService) {}
   ngOnInit(): void {
     this.exploreAroundYouService.getListFriend();
@@ -32,6 +33,9 @@ export class ExploreAroundYouComponent {
 
     const scollEvent = this.scollEvent?.nativeElement;
     scollEvent.addEventListener('wheel', (event: WheelEvent) => this.wheelEventVerticalToHorizontal(event));
+  }
+  wheelEventVerticalToHorizontal(event: WheelEvent) {
+    throw new Error('Method not implemented.');
   }
   @HostListener('wheel', ['$event'])
   onMouseWheel(event: WheelEvent) {

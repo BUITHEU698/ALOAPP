@@ -13,7 +13,12 @@ import { SetTimeLimitComponent } from './set-time-limit/set-time-limit.component
 import { MenuSettingMessComponent } from './menu-setting-mess/menu-setting-mess.component';
 import { ListChooseGimComponent } from './list-choose-gim/list-choose-gim.component';
 import { ExploreAroundYou_1Component } from './function_explore_around_you/explore-around-you/explore-around-you-1.component';
-
+import { FormLoginAloline1Component } from './form-login-aloline1/form-login-aloline1.component';
+import { ScrollComponent } from './scroll/scroll.component';
+import { scrollShowHide } from './scroll-show-hide.directive';
+import { PopupChangeAvatarComponent } from './popup-change-avatar/popup-change-avatar.component';
+import { ImageCropperModule } from 'ngx-image-cropper';
+import { PopupCropAvatarComponent } from './popup-crop-avatar/popup-crop-avatar.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +34,13 @@ import { ExploreAroundYou_1Component } from './function_explore_around_you/explo
     MenuSettingMessComponent,
     ListChooseGimComponent,
     ExploreAroundYou_1Component,
+
+    FormLoginAloline1Component,
+    ScrollComponent,
+    PopupChangeAvatarComponent,
+    PopupCropAvatarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, scrollShowHide, ImageCropperModule],
   providers: [],
   bootstrap: [AppComponent],
 })

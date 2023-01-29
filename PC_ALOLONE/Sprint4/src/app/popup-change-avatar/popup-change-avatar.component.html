@@ -1,0 +1,33 @@
+<div class="popub-change-avatar">
+
+    <div class="header">
+        <h3>CẬP NHẬT ẢNH ĐẠI DIỆN</h3>
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="14" fill="#F1F2F5" />
+            <g clip-path="url(#clip0_9227_596087)">
+                <path
+                    d="M15.1539 14.0006L20.2932 8.86181C20.6122 8.54278 20.6122 8.02555 20.2932 7.70655C19.9742 7.38753 19.4569 7.38753 19.138 7.70655L13.9991 12.8459L8.86034 7.70655C8.54132 7.38753 8.02408 7.38753 7.70509 7.70655C7.38609 8.02558 7.38606 8.54281 7.70509 8.86181L12.8444 14.0006L7.70509 19.1394C7.38606 19.4584 7.38606 19.9757 7.70509 20.2947C8.02411 20.6137 8.54135 20.6137 8.86034 20.2947L13.9991 15.1553L19.1379 20.2947C19.4569 20.6137 19.9742 20.6137 20.2932 20.2947C20.6122 19.9756 20.6122 19.4584 20.2932 19.1394L15.1539 14.0006Z"
+                    fill="#7D7E81" />
+            </g>
+            <defs>
+                <clipPath id="clip0_9227_596087">
+                    <rect width="13.0667" height="13.0667" fill="white" transform="translate(7.46582 7.4668)" />
+                </clipPath>
+            </defs>
+        </svg>
+
+
+    </div>
+    <div class="crop-image">
+        <input class="custom-file-input" type="file" (change)="fileChangeEvent($event)">
+
+        <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="1 / 1"
+            format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" [resizeToWidth]="396"
+            [resizeToHeight]="396" [cropperStaticWidth]="300" [cropperStaticHeight]="300" [roundCropper]='true'
+            [allowMoveImage] ='true'
+         
+            (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>
+
+        <img [src]="croppedImage" />
+    </div>
+</div>
